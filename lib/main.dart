@@ -18,6 +18,18 @@ class MyApp extends StatefulWidget {
 
 
 class _MyAppState extends State <MyApp> {
+
+
+     //BOTOM NAVIGATION
+   int selectedIndex = 0;
+  final widgetOptions = [
+    Text('Home'),
+    Text('Chats'),
+    Text('Diary'),
+    Text("Contacts"),
+  ];
+
+
   @override 
   
   Widget build(BuildContext context) {
@@ -29,6 +41,51 @@ class _MyAppState extends State <MyApp> {
            backgroundColor: Colors.blue,
          ),
          backgroundColor: Colors.blue[100] ,
+
+
+         drawer: new Drawer (
+
+              child: ListView(
+              
+                children : <Widget>[
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.arrow_back),
+                    title: Text("Back"),
+  
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.settings),
+                    title: Text("Settings"),
+                  ),
+
+
+                   ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.mood_bad),
+                    title: Text("Logout"),
+                  ),
+
+
+
+
+                ]
+              ),               
+
+         ),
 
          body: Container(
            
@@ -48,8 +105,56 @@ class _MyAppState extends State <MyApp> {
            )
          ),
 
+             //BOTTOM NAVIGATION
+         bottomNavigationBar: BottomNavigationBar(
+          
+           items: <BottomNavigationBarItem>[
 
+
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(Icons.home),
+             title: Text('Home')
+             ),
+
+             
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+              icon: Icon(Icons.chat), 
+              title: Text('Chats')
+              ),
+
+
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+              icon: Icon(Icons.chrome_reader_mode), 
+              title: Text('Diary')
+              ),
+
+
+              BottomNavigationBarItem(
+                backgroundColor: Colors.blue,
+              icon: Icon(Icons.contacts), 
+              title: Text('Contacts')
+              ),
+
+
+        ],
+        currentIndex: selectedIndex,
+        fixedColor: Colors.blue[100],
+        onTap: onItemTapped,
+
+
+    )
     );
+  }
+
+
+      //BOTOM NAVIGATION
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 
 }
@@ -89,3 +194,5 @@ final MaterialColor warna;
   }
   
 }
+
+
