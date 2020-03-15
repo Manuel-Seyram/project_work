@@ -6,193 +6,131 @@ void main(List<String>args){
   
  runApp(new MaterialApp(
    
-   home : MyApp(),
+   home : SignUp(),
  ));
 
 }
 
-class MyApp extends StatefulWidget {
+
+
+
+
+class SignUp extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState ();
+  _SignUpState createState() => new _SignUpState();
 }
 
 
-class _MyAppState extends State <MyApp> {
+class _SignUpState extends State <SignUp> {
 
 
-     //BOTOM NAVIGATION
-   int selectedIndex = 0;
-  final widgetOptions = [
-    Text('Home'),
-    Text('Chats'),
-    Text('Diary'),
-    Text("Contacts"),
-  ];
+ TextStyle style = TextStyle (fontFamily: '', fontSize: 20.0, color: Colors.black);
 
 
-  @override 
   
+   @override
   Widget build(BuildContext context) {
 
-    return Scaffold( 
-         
-         appBar: new AppBar(
-           title: Text("Happy"),
-           backgroundColor: Colors.blue,
-         ),
-         backgroundColor: Colors.blue[100] ,
+
+    final emailField = TextField(
+      obscureText: false,
+      style: style,
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Email",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+      ),
+    );
 
 
-         drawer: new Drawer (
-
-              child: ListView(
-              
-                children : <Widget>[
-
-                  ListTile(
-
-                    onTap: (){},
-                    leading: Icon(Icons.arrow_back),
-                    title: Text("Back"),
-  
-                  ),
-
-                  ListTile(
-
-                    onTap: (){},
-                    leading: Icon(Icons.home),
-                    title: Text("Home"),
-                  ),
-
-                  ListTile(
-
-                    onTap: (){},
-                    leading: Icon(Icons.settings),
-                    title: Text("Settings"),
-                  ),
-
-
-                   ListTile(
-
-                    onTap: (){},
-                    leading: Icon(Icons.mood_bad),
-                    title: Text("Logout"),
-                  ),
+     final passwordField = TextField(
+      obscureText: true,
+      style: style,
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Password",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+      ),
+    );
 
 
 
+    final registerButton = Material(
 
-                ]
-              ),               
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.blue,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: (){},
+        child: Text("Proceed", textAlign:TextAlign.center , style: style.copyWith(color: Colors.white, fontWeight: FontWeight.bold)), // text
+      ),
 
-         ),
+    );
 
-         body: Container(
-           
-           padding: EdgeInsets.all(20.0),
-           child: GridView.count(
-             crossAxisCount: 2,
-             children: <Widget>[
 
-              MyMenu(title: "Movies", icon: Icons.movie, warna: Colors.blue),
-              MyMenu(title: "Music", icon: Icons.headset, warna: Colors.blue),
-              MyMenu(title: "Games", icon: Icons.mood, warna: Colors.blue), 
-              MyMenu(title: "Exercise", icon: Icons.directions_run, warna: Colors.blue),
-              MyMenu(title: "Favourite", icon: Icons.favorite, warna: Colors.blue),
-             
+    return Scaffold(
+      
+
+   // backgroundColor: Colors.blue[200],
+      body:new Stack(
+      
+      
+    
+
+        children: <Widget>[
+
+
+          Center(
+            
+            child: Container(
+              //color: Colors.blue[200],
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/login.jpg"), fit:BoxFit.cover,),),
+              child: Padding(padding: const EdgeInsets.all(36.0),  
+              child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
+               children: <Widget>[
+                SizedBox( height: 15.0,),
+                Text("Register", style: TextStyle(color: Colors.black, fontStyle: FontStyle.italic, fontFamily: 'Pacifico', fontSize:50.0),),
+                
+                SizedBox( height: 45.0),
+
+                emailField,
+
+                SizedBox( height: 25.0),
+
+                passwordField,
+
+                SizedBox( height: 25.0),
+                registerButton,
+                SizedBox( height: 15.0),
+
                
-             ],
-           )
-         ),
-
-             //BOTTOM NAVIGATION
-         bottomNavigationBar: BottomNavigationBar(
-          
-           items: <BottomNavigationBarItem>[
-
-
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-            icon: Icon(Icons.home),
-             title: Text('Home')
-             ),
-
+              ]
+              
+),
              
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-              icon: Icon(Icons.chat), 
-              title: Text('Chats')
               ),
-
-
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-              icon: Icon(Icons.chrome_reader_mode), 
-              title: Text('Diary')
-              ),
-
-
-              BottomNavigationBarItem(
-                backgroundColor: Colors.blue,
-              icon: Icon(Icons.contacts), 
-              title: Text('Contacts')
-              ),
-
+             
+            ),
+          )
+      
 
         ],
-        currentIndex: selectedIndex,
-        fixedColor: Colors.blue[100],
-        onTap: onItemTapped,
 
+        
+      ),
 
-    )
     );
-  }
 
 
-      //BOTOM NAVIGATION
-  void onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-  }
-
-}
-
-
-class MyMenu extends StatelessWidget {
-  MyMenu({this.title, this.icon, this.warna});
-
-final String title;
-final IconData icon;
-final MaterialColor warna; 
-
-
-
-  @override
-  Widget build(BuildContext context){
-    return  Card(
-                 margin: EdgeInsets.all(9.0),
-                 child: InkWell(
-                   onTap: (){},
-                   splashColor: Colors.blue,
-                   child: Center(
-                     child: Column(
-                       mainAxisSize: MainAxisSize.min,
-                       children: <Widget>[
-                         Icon(icon, size: 80.0, color: warna),
-                         Text(title, style: new TextStyle(fontSize: 18.0))
-                       ],
-                     )
-                   ),
-                 ),
-
-               );
-                
-
+  
     
   }
+
+
   
+
 }
-
-
