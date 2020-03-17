@@ -19,12 +19,15 @@ class _CheckBoxInListviewState extends State<CheckBoxInListview> {
 
     return Scaffold(
       
+      
       appBar: AppBar(
-        title: Text("Select likes to proceed with registration"),
+      
+        title: Text("Choose Likes", textAlign: TextAlign.center,),
         backgroundColor: Colors.blue,
       ),
       
       body: ListView(
+        
         
         padding: EdgeInsets.all(8.0),
         children: _texts.map((text) => CheckboxListTile(
@@ -45,8 +48,19 @@ class _CheckBoxInListviewState extends State<CheckBoxInListview> {
 
     
       ),
-      floatingActionButton: RaisedButton(onPressed: (){}),
-    
+      
+      floatingActionButton: RaisedButton(onPressed: (){},
+       textColor: Colors.white, 
+       color: Colors.blue,
+       child: new Text("Finish"),
+       shape: RoundedRectangleBorder(
+       borderRadius: new BorderRadius.circular(18.0),
+       side: BorderSide(color: Colors.blue),
+         ),
+       ),
+
+    backgroundColor: Colors.blue[100],
+
     );
 
 
