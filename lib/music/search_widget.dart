@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:fluttermusic/album.dart';
+import 'package:project_work/music/album.dart';
 import 'cupertino_search_bar.dart';
 import 'search.dart';
 import 'musicservice.dart';
