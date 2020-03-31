@@ -1,18 +1,20 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'player_widget.dart';
 import 'browse_widget.dart';
 import 'search_widget.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Music());
 
-class MyApp extends StatelessWidget {
+class Music extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Apple Music',
-          CupertinoTabScaffold(
+        title: 'Music',
+          home: CupertinoTabScaffold(
           tabBar: CupertinoTabBar(
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
@@ -34,6 +36,9 @@ class MyApp extends StatelessWidget {
               default:
                 break;
             }
+
+          
+
           },
         ));
   }
