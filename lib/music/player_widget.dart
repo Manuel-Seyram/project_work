@@ -125,7 +125,6 @@ class _PlayerWidgetState extends State<PlayerWidget> {
   @override
   void dispose() async {
     super.dispose();
-    await flutterSound.stopPlayer();
     if (_playerSubscription != null) {
       _playerSubscription.cancel();
       _playerSubscription = null;
