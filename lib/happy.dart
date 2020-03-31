@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'music/music.dart';
 
 
 
@@ -113,6 +114,10 @@ class _MyAppState extends State <MyApp> {
                  margin: EdgeInsets.all(9.0),
                  child: InkWell(
                    onTap: (){
+
+                     Navigator.push(
+            context, MaterialPageRoute(builder: (context)=> Music())
+          );
 
                    },
                    splashColor: Colors.blue,
