@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_db/ui/widgets/widgets.dart';
-import 'package:movie_db/global.dart';
+import 'package:project_work/movies/ui/widgets/widgets.dart';
+import 'package:project_work/movies/global.dart';
 
 class MyScreenshots extends StatelessWidget {
   @override
