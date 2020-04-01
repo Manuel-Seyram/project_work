@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:movie_db/global.dart';
-import 'package:movie_db/models/moviemodel.dart';
-import 'package:movie_db/ui/widgets/widgets.dart';
+import 'package:project_work/movies/global.dart';
+import 'package:project_work/movies/moviemodel.dart';
+import 'package:project_work/movies/ui/widgets/widgets.dart';
 
 import '../../api.dart';
 
