@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:project_work/movies/movies.dart';
 import 'music/music.dart';
+import 'movies/movies.dart';
 
 
 
@@ -91,6 +93,9 @@ class _MyAppState extends State <MyApp> {
                  margin: EdgeInsets.all(9.0),
                  child: InkWell(
                    onTap: (){
+                     Navigator.push(
+            context, MaterialPageRoute(builder: (context)=> Movies())
+            );
 
                    },
                    splashColor: Colors.blue,
