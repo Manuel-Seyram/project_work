@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_db/global.dart';
-import 'package:movie_db/models/featuredmoviemodel.dart';
+import 'package:project_work/movies/global.dart';
+import 'package:project_work/movies/featuredmoviemodel.dart';
 import '../screens/screens.dart';
 
 class MovieContainer extends StatelessWidget {
