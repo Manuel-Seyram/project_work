@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_db/ui/screens/screens.dart';
+import 'package:project_work/movies/ui/screens/screens.dart';
 
 class MyHero extends StatelessWidget {
   final String imgUrl;
@@ -77,7 +77,7 @@ class MyHero extends StatelessWidget {
                 padding: EdgeInsets.all(15.0),
                 child: Icon(
                   Icons.play_arrow,
-                  color: Colors.red,
+                  color: Colors.blue,
                 ),
               ),
             ),
