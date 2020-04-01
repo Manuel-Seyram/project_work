@@ -1,15 +1,15 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:movie_db/models/moviemodel.dart';
-import 'package:movie_db/models/featuredmoviemodel.dart';
+import 'package:project_work/movies/moviemodel.dart';
+import 'package:project_work/movies/featuredmoviemodel.dart';
 
-import 'models/genremodel.dart';
+import 'genremodel.dart';
 
 class Api {
   var httpClient = http.Client();
 
-  static const url = "https://api.themoviedb.org/3";
-  static const apiKey = "YOUR API KEY";
+  static const url = "https://api.themoviedb.org/3/movie/550?";
+  static const apiKey = "ec8881bee501ccb2d08df3836a229040";
 
   Future<List<GenreModel>> getGenreList() async {
     final response = await http.get('$url/genre/movie/list?api_key=$apiKey');
