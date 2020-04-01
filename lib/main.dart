@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import  'Logins/checkboxes.dart';
+import 'happy.dart';
 
 
 void main(List<String>args){
@@ -68,7 +69,7 @@ class _SignUpState extends State <SignUp> {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: (){
           Navigator.push(
-            context, MaterialPageRoute(builder: (context)=> CheckBoxInListview())
+            context, MaterialPageRoute(builder: (context)=> MyApp())
           );
         },
         child: Text("Proceed", textAlign:TextAlign.center , style: style.copyWith(color: Colors.white, fontWeight: FontWeight.bold)), // text
