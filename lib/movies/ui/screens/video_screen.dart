@@ -29,7 +29,7 @@ class _VideoAppState extends State<VideoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Video Demo',
+      title: 'Video',
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Stack(
