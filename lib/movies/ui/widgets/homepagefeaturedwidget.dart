@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_db/models/featuredmoviemodel.dart';
-import 'package:movie_db/global.dart';
+import 'package:project_work/movies/featuredmoviemodel.dart';
+import 'package:project_work/movies/global.dart';
 class HomePageFeaturedWidget extends StatelessWidget {
   final AsyncSnapshot<List<FeaturedMovieModel>> snapshot;
   const HomePageFeaturedWidget({
