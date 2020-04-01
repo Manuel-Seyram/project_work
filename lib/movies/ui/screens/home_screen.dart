@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_db/api.dart';
-import 'package:movie_db/models/featuredmoviemodel.dart';
-import 'package:movie_db/models/genremodel.dart';
-import 'package:movie_db/ui/widgets/homepagefeaturedwidget.dart';
-import 'package:movie_db/ui/widgets/widgets.dart';
+import 'package:project_work/movies/api.dart';
+import 'package:project_work/movies/featuredmoviemodel.dart';
+import 'package:project_work/movies/genremodel.dart';
+import 'package:project_work/movies/ui/widgets/homepagefeaturedwidget.dart';
+import 'package:project_work/movies/ui/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -37,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
           leading: IconButton(
               icon: Icon(Icons.menu, color: Colors.black), onPressed: () {}),
           title: Text(
-            "Netflixy",
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            "Movie Base",
+            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),
@@ -72,10 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
-                              color: Colors.red,
+                              color: Colors.blue,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.red,
+                                  color: Colors.blue,
                                   blurRadius: 2.5,
                                 )
                               ],
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 15,
               ),
               SectionContainer(
-                sectionTitle: "Popular on Netflixy",
+                sectionTitle: "Popular on Movie Base",
                 child: Container(
                   height: MediaQuery.of(context).size.height / 3,
                   child: FutureBuilder<List<FeaturedMovieModel>>(
