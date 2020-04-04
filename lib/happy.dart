@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:project_work/movies/movies.dart';
 import 'music/music.dart';
 import 'movies/movies.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 
@@ -145,9 +146,17 @@ class _MyAppState extends State <MyApp> {
                 Card(
                  margin: EdgeInsets.all(9.0),
                  child: InkWell(
-                   onTap: (){
+                   onTap: () async {
+                         const url = 'https://m.silvergames.com/';
 
-                   },
+                      if (await canLaunch(url)) {
+                      await launch(url, forceWebView: true);
+                    } else {
+                      throw 'Could not launch $url';
+                       }
+                      },
+
+                   
                    splashColor: Colors.blue,
                    child: Center(
                      child: Column(
@@ -168,9 +177,16 @@ class _MyAppState extends State <MyApp> {
                 Card(
                  margin: EdgeInsets.all(9.0),
                  child: InkWell(
-                   onTap: (){
+                   onTap: () async {
+                         const url = 'https://www.calm.com/';
 
-                   },
+                      if (await canLaunch(url)) {
+                      await launch(url, forceWebView: true);
+                    } else {
+                      throw 'Could not launch $url';
+                       }
+                      },
+
                    splashColor: Colors.blue,
                    child: Center(
                      child: Column(
@@ -191,16 +207,24 @@ class _MyAppState extends State <MyApp> {
                 Card(
                  margin: EdgeInsets.all(9.0),
                  child: InkWell(
-                   onTap: (){
+                   onTap: () async {
+                         const url = 'https://www.wattpad.com/';
 
-                   },
+                      if (await canLaunch(url)) {
+                      await launch(url, forceWebView: true);
+                    } else {
+                      throw 'Could not launch $url';
+                       }
+                      },
+
+                   
                    splashColor: Colors.blue,
                    child: Center(
                      child: Column(
                        mainAxisSize: MainAxisSize.min,
                        children: <Widget>[
-                         Icon(Icons.favorite, color: Colors.blue, size:80.0 ,),
-                         Text("Favorites", style: new TextStyle(fontSize: 18.0))
+                         Icon(Icons.import_contacts, color: Colors.blue, size:80.0 ,),
+                         Text("Read", style: new TextStyle(fontSize: 18.0))
                           
                       
                        ],
