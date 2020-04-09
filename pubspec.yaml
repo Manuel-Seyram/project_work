@@ -30,6 +30,7 @@ dependencies:
   flutter_sound: ^2.1.1
   intl: ^0.15.6
   url_launcher: ^5.2.5
+  flutter_snake_navigationbar: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
      - assets/icons/ic_volume_up.png
      - assets/icons/2.0x/ic_volume_up.png
      - assets/icons/3.0x/ic_volume_up.png
+     - assets/logo/alleviate logo.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
