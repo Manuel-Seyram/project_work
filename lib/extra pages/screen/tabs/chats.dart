@@ -1,6 +1,6 @@
-import 'package:alleviate/data/chatData.dart';
-import 'package:alleviate/widget/appBar.dart';
-import 'package:alleviate/widget/chatWidget.dart';
+import 'package:project_work/extra pages/data/chatData.dart';
+import 'package:project_work/extra pages/widget/appBar.dart';
+import 'package:project_work/extra pages/widget/chatWidget.dart';
 import 'package:flutter/material.dart';
 
 class Chat extends StatefulWidget {
