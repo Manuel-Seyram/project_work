@@ -1,8 +1,9 @@
-import 'package:alleviate/screen/homePage.dart';
-import 'package:alleviate/screen/loginPage.dart';
-import 'package:alleviate/screen/tabs/contacts.dart';
-import 'package:alleviate/screen/tabs/diary.dart';
-import 'package:alleviate/screen/tabs/happy.dart';
+import 'package:project_work/extra pages/screen/homePage.dart';
+import 'package:project_work/extra pages/screen/loginPage.dart';
+import 'package:project_work/extra pages/screen/tabs/contacts.dart';
+import 'package:project_work/extra pages/screen/tabs/diary.dart';
+import 'package:project_work/extra pages/screen/tabs/happy.dart';
+import 'package:project_work/happy.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -116,7 +117,7 @@ class Welcome extends StatelessWidget {
                 child: new Icon(Icons.mood, size: 55.0),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Happy()));
+                      MaterialPageRoute(builder: (context) => MyApp()));
                 },
               ),
             ),
