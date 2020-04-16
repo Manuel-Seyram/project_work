@@ -66,14 +66,18 @@ class Welcome extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 60,
+          
               child: new GestureDetector(
-                child: new Icon(Icons.home, size: 55.0),
+                child: new Icon(Icons.home, size: 55.0,),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Happy()));
                 },
+              
               ),
+      
             ),
+        
             //Text("Home", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
               radius: 60,
