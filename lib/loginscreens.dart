@@ -33,24 +33,41 @@ class _LoginscreensState extends State<Loginscreens> {
                         //backgroundColor: Colors.transparent,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 350.0),
+                        padding: EdgeInsets.only(top: 100.0),
                       ),
                     ],
                   ),
                 ),
               ),
-               Expanded(
-                       
+               Center(
+                    
                       child: RaisedButton(
-                        width
-                        child: Text("Approve"),
-                        onPressed: () => null,
+                        child: Text("                       Login                            "),
+                        onPressed: (){
+                           Navigator.push(
+                          context, MaterialPageRoute(builder: (context)=> LoginPage())
+                          );
+                        },
+                        color: Colors.blue,
+                         shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                       side: BorderSide(color: Colors.blue, width:7.0)
+                       ),
                       ),
                ),
-                Expanded(
+                Center(
                       child: RaisedButton(
-                        child: Text("Approve"),
-                        onPressed: () => null,
+                        child: Text("      No Account? Sign Up       "),
+                        onPressed: (){
+                           Navigator.push(
+                           context, MaterialPageRoute(builder: (context)=> SignUp())
+                          );
+                        },
+                        color: Colors.white,
+                         shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                       side: BorderSide(color: Colors.white, width:7.0)
+                       ),
                       ),
                 )
             ]
