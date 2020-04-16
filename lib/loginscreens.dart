@@ -18,25 +18,48 @@ class _LoginscreensState extends State<Loginscreens> {
           Container(
             decoration: BoxDecoration(color: Colors.black),
           ),
-            CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 5.0,
-                        backgroundImage: AssetImage('assets/logo/alleviate logo.png', ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[ 
+              Expanded(
+                flex: 2,
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircleAvatar(
+                        radius: 60.0,
+                        backgroundImage: AssetImage('assets/images/alleviatelogo.jpg')
+                        //backgroundColor: Colors.transparent,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 4.0),
+                        padding: EdgeInsets.only(top: 350.0),
                       ),
-                      Text(
-                        'Alleviate',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24.0),
+                    ],
+                  ),
+                ),
+              ),
+               Expanded(
+                       
+                      child: RaisedButton(
+                        width
+                        child: Text("Approve"),
+                        onPressed: () => null,
                       ),
-
+               ),
+                Expanded(
+                      child: RaisedButton(
+                        child: Text("Approve"),
+                        onPressed: () => null,
+                      ),
+                )
+            ]
+          
+          ),
+        ]
+      
         
-         ] ,
-      )
+      ),
     );
   }
 }
