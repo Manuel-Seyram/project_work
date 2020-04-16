@@ -1,23 +1,20 @@
 import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
+import 'loginscreens.dart';
 import 'splash.dart';
 
 
 
 
 
-void main() => runApp(MyApp());
+var routes = <String, WidgetBuilder>{
+  
+  "/intro": (BuildContext context) => Loginscreens(),
+};
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Alleviate',
-      theme: ThemeData(    
-        primarySwatch: Colors.blue,
-      ),
-      home: SplashScreen(),
-    );
-  }
-}
+void main() => runApp(new MaterialApp(
+    theme:
+        ThemeData(primaryColor: Colors.lightBlueAccent,),
+    debugShowCheckedModeBanner: false,
+    home: SplashScreen(),
+    routes: routes));
