@@ -18,6 +18,7 @@ class _LoginscreensState extends State<Loginscreens> {
           Container(
             decoration: BoxDecoration(color: Colors.black),
           ),
+          
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[ 
@@ -39,6 +40,7 @@ class _LoginscreensState extends State<Loginscreens> {
                   ),
                 ),
               ),
+
                Center(
                     
                       child: RaisedButton(
@@ -55,6 +57,7 @@ class _LoginscreensState extends State<Loginscreens> {
                        ),
                       ),
                ),
+
                 Center(
                       child: RaisedButton(
                         child: Text("      No Account? Sign Up       "),
