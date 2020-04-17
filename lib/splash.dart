@@ -54,6 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
               ),
+              
               Expanded(
                 flex: 1,
                 child: Column(
