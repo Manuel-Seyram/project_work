@@ -30,7 +30,8 @@ class _LoginscreensState extends State<Loginscreens> {
                     children: <Widget>[
                       CircleAvatar(
                         radius: 60.0,
-                        backgroundImage: AssetImage('assets/images/alleviatelogo.jpg')
+                        backgroundImage: AssetImage('assets/images/alleviatelogo.jpg'),
+                        backgroundColor: Colors.black,
                         //backgroundColor: Colors.transparent,
                       ),
                       Padding(
