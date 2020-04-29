@@ -84,7 +84,7 @@ class Welcome extends StatelessWidget {
               child: new GestureDetector(
                 child: new Icon(
                   Icons.chat,
-                  size: 55.0,
+                  size: 60.0,
                 ),
                 onTap: () {
                   Navigator.push(context,
@@ -127,7 +127,7 @@ class Welcome extends StatelessWidget {
             ),
             //Text("Diary", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 70,
+              radius: 60,
               child: new GestureDetector(
                 child: new Icon(Icons.contacts, size: 60.0),
                 onTap: () {
