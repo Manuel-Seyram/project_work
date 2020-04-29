@@ -4,6 +4,7 @@ import 'package:project_work/movies/movies.dart';
 import 'music/music.dart';
 import 'movies/movies.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'extra pages/screen/tabs/diary.dart';
 
 
 
@@ -18,12 +19,15 @@ class _MyAppState extends State <MyApp> {
 
      //BOTOM NAVIGATION
    int selectedIndex = 0;
-  final widgetOptions = [
-    Text('Home'),
-    Text('Chats'),
-    Text('Diary'),
-    Text("Contacts"),
-  ];
+   List<Widget> pageList = List<Widget>();
+
+  @override
+  void initstate(){
+
+    pageList.add(Diary());
+    super.initState();
+
+  }
 
 
   @override 
@@ -239,8 +243,12 @@ class _MyAppState extends State <MyApp> {
            )
          ),
 
+        
+
              //BOTTOM NAVIGATION
          bottomNavigationBar: BottomNavigationBar(
+
+           type: BottomNavigationBarType.fixed,
           
            items: <BottomNavigationBarItem>[
 
