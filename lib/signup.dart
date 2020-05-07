@@ -34,7 +34,7 @@ class _SignUpState extends State <SignUp> {
      final passwordField = TextField(
       obscureText: true,
       style: style,
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: TextInputType.text,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Password",
@@ -65,6 +65,7 @@ class _SignUpState extends State <SignUp> {
 
     return Scaffold(
       
+      resizeToAvoidBottomInset: false,
 
    // backgroundColor: Colors.blue[200],
       body:new Stack(
@@ -79,7 +80,7 @@ class _SignUpState extends State <SignUp> {
             
             child: Container(
               //color: Colors.blue[200],
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/login.jpg"), fit:BoxFit.cover,),),
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/avatarsignup.png"), fit:BoxFit.cover,),),
               child: Padding(padding: const EdgeInsets.all(36.0),  
               child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
                children: <Widget>[
