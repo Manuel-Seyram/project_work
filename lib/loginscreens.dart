@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
-import 'extra pages/screen/loginPage.dart';
+import 'Login.dart';
 
 class Loginscreens extends StatefulWidget {
   @override
@@ -48,7 +48,7 @@ class _LoginscreensState extends State<Loginscreens> {
                         child: Text("                       Login                            "),
                         onPressed: (){
                            Navigator.push(
-                          context, MaterialPageRoute(builder: (context)=> LoginPage())
+                          context, MaterialPageRoute(builder: (context)=> LogIn())
                           );
                         },
                         color: Colors.blue,
