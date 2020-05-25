@@ -70,8 +70,13 @@ flutter:
      - assets/icons/2.0x/ic_volume_up.png
      - assets/icons/3.0x/ic_volume_up.png
      - assets/images/alleviatelogo.jpg
-     - assets/images/avatarlogin.jpg
+     - assets/images/Artboard.png
      - assets/images/avatarsignup.png
+     - assets/images/happyicon.png
+     - assets/images/chaticon.png
+     - assets/images/contacticon.png
+     - assets/images/homeicon.png
+     - assets/images/diaryicon.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
