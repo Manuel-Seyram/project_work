@@ -82,7 +82,7 @@ class _LogInState extends State <LogIn> {
             
             child: Container(
               //color: Colors.blue[200],
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/avatarlogin.jpg"), fit:BoxFit.cover,),),
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboard.png"), fit:BoxFit.cover,),),
               child: Padding(padding: const EdgeInsets.all(36.0),  
               child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
                children: <Widget>[
