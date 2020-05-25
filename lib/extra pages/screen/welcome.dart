@@ -65,10 +65,10 @@ class Welcome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             CircleAvatar(
-              radius: 60,
+              radius: 65,
+              backgroundImage: AssetImage('assets/images/happyicon.png'),
           
               child: new GestureDetector(
-                child: new Icon(Icons.home, size: 55.0,),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Happy()));
@@ -80,12 +80,9 @@ class Welcome extends StatelessWidget {
         
             //Text("Home", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 60,
+              radius: 75,
+              backgroundImage: AssetImage('assets/images/chaticon.png'),
               child: new GestureDetector(
-                child: new Icon(
-                  Icons.chat,
-                  size: 60.0,
-                ),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Diary()));
@@ -100,9 +97,9 @@ class Welcome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 60,
+                radius: 65,
+                backgroundImage: AssetImage('assets/images/contacticon.png',),
                 child: new GestureDetector(
-                  child: new Icon(Icons.home, size: 55.0),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Contacts()));
@@ -116,9 +113,9 @@ class Welcome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             CircleAvatar(
-              radius: 60,
+              radius: 70,
+              backgroundImage: AssetImage('assets/images/homeicon.png'),
               child: new GestureDetector(
-                child: new Icon(Icons.mood, size: 55.0),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyApp()));
@@ -127,9 +124,9 @@ class Welcome extends StatelessWidget {
             ),
             //Text("Diary", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 60,
+              radius: 70,
+              backgroundImage: AssetImage('assets/images/diaryicon.png'),
               child: new GestureDetector(
-                child: new Icon(Icons.contacts, size: 60.0),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Diary()));
