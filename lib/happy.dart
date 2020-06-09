@@ -17,19 +17,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State <MyApp> {
 
 
-     //BOTOM NAVIGATION
-   int selectedIndex = 0;
-   List<Widget> pageList = List<Widget>();
-
-  @override
-  void initstate(){
-
-    pageList.add(Diary());
-    super.initState();
-
-  }
-
-
   @override 
   
   Widget build(BuildContext context) {
@@ -245,59 +232,8 @@ class _MyAppState extends State <MyApp> {
 
         
 
-             //BOTTOM NAVIGATION
-         bottomNavigationBar: BottomNavigationBar(
-
-           type: BottomNavigationBarType.fixed,
-          
-           items: <BottomNavigationBarItem>[
-
-
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-            icon: Icon(Icons.home),
-             title: Text('Home')
-             ),
-
-             
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-              icon: Icon(Icons.chat), 
-              title: Text('Chats')
-              ),
-
-
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-              icon: Icon(Icons.chrome_reader_mode), 
-              title: Text('Diary')
-        
-              ),
-
-
-              BottomNavigationBarItem(
-                backgroundColor: Colors.blue,
-              icon: Icon(Icons.contacts), 
-              title: Text('Contacts')
-              ),
-
-
-        ],
-        currentIndex: selectedIndex,
-        fixedColor: Colors.blue[100],
-        onTap: onItemTapped,
-
-
-    )
+         
     );
-  }
-
-
-      //BOTOM NAVIGATION
-  void onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
   }
 
 }
