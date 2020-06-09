@@ -4,8 +4,7 @@ import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'tabs/chats.dart';
 import 'tabs/contacts.dart';
 import 'tabs/diary.dart';
-import 'tabs/happy.dart';
-
+import 'package:project_work/happy.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -19,7 +18,7 @@ class _HomePageState extends State<HomePage> {
         return Chat();
         break;
       case 1:
-        return Happy();
+        return MyApp();
         break;
       case 2:
         return Diary();
