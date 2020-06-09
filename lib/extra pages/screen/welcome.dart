@@ -2,7 +2,7 @@ import 'package:project_work/extra pages/screen/homePage.dart';
 import 'package:project_work/Login.dart';
 import 'package:project_work/extra pages/screen/tabs/contacts.dart';
 import 'package:project_work/extra pages/screen/tabs/diary.dart';
-import 'package:project_work/extra pages/screen/tabs/happy.dart';
+import 'package:project_work/extra pages/screen/tabs/chats.dart';
 import 'package:project_work/happy.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +71,7 @@ class Welcome extends StatelessWidget {
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Happy()));
+                      MaterialPageRoute(builder: (context) => MyApp()));
                 },
               
               ),
@@ -85,7 +85,7 @@ class Welcome extends StatelessWidget {
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Diary()));
+                      MaterialPageRoute(builder: (context) => Chat()));
                 },
               ),
             ),
