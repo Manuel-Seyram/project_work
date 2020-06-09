@@ -80,7 +80,7 @@ class _SignUpState extends State <SignUp> {
             
             child: Container(
               //color: Colors.blue[200],
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/avatarsignup.png"), fit:BoxFit.cover,),),
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboardd.jpg"), fit:BoxFit.cover,),),
               child: Padding(padding: const EdgeInsets.all(36.0),  
               child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
                children: <Widget>[
