@@ -41,7 +41,7 @@ class Welcome extends StatelessWidget {
             )
           ],
         ),
-        Text("Takoradi", style: TextStyle(color: Colors.white, fontSize: 18.0)),
+        Text("", style: TextStyle(color: Colors.white, fontSize: 18.0)),
         GestureDetector(
           onTap: () {
             Navigator.push(
