@@ -1,4 +1,4 @@
-import 'package:project_work/extra pages/screen/homePage.dart';
+import 'package:project_work/extra pages/screen/navigationbar.dart';
 import 'package:flutter/material.dart';
 
 class Notification extends StatefulWidget {
@@ -19,7 +19,7 @@ class _NotificationState extends State<Notification> {
             child: new Icon(Icons.arrow_back, size: 55.0),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+                  context, MaterialPageRoute(builder: (context) => Navigation()));
             },
           )),
         ),
