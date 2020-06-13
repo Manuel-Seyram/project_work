@@ -1,4 +1,4 @@
-import 'package:project_work/extra pages/screen/homePage.dart';
+import 'package:project_work/extra pages/screen/navigationbar.dart';
 import 'package:project_work/Login.dart';
 import 'package:project_work/extra pages/screen/tabs/contacts.dart';
 import 'package:project_work/extra pages/screen/tabs/diary.dart';
@@ -45,7 +45,7 @@ class Welcome extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => HomePage()));
+                context, MaterialPageRoute(builder: (context) => Navigation()));
           },
           child: CircleAvatar(
             radius: 60,
