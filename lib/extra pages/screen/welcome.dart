@@ -80,7 +80,7 @@ class Welcome extends StatelessWidget {
         
             //Text("Home", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 75,
+              radius: 65,
               backgroundImage: AssetImage('assets/images/chaticon.png'),
               child: new GestureDetector(
                 onTap: () {
@@ -97,7 +97,7 @@ class Welcome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 65,
+                radius: 60,
                 backgroundImage: AssetImage('assets/images/contacticon.png',),
                 child: new GestureDetector(
                   onTap: () {
@@ -113,7 +113,7 @@ class Welcome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             CircleAvatar(
-              radius: 70,
+              radius: 65,
               backgroundImage: AssetImage('assets/images/homeicon.png'),
               child: new GestureDetector(
                 onTap: () {
@@ -124,7 +124,7 @@ class Welcome extends StatelessWidget {
             ),
             //Text("Diary", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 70,
+              radius: 65,
               backgroundImage: AssetImage('assets/images/diaryicon.png'),
               child: new GestureDetector(
                 onTap: () {
