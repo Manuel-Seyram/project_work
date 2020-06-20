@@ -27,7 +27,8 @@ class _LogInState extends State <LogIn> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Email",
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+         icon: Icon(Icons.mail)
       ),
     );
 
@@ -39,7 +40,8 @@ class _LogInState extends State <LogIn> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Password",
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+         icon: Icon(Icons.vpn_key)
       ),
     );
 
@@ -82,7 +84,7 @@ class _LogInState extends State <LogIn> {
             
             child: Container(
               //color: Colors.blue[200],
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboard.jpg"), fit:BoxFit.cover,),),
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboard.png"), fit:BoxFit.cover,),),
               child: Padding(padding: const EdgeInsets.all(36.0),  
               child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
                children: <Widget>[
