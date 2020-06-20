@@ -12,6 +12,7 @@ class _ContactsState extends State<Contacts> {
     return Scaffold(
         appBar: appBar("Contact"),
         backgroundColor: Color(0xffe3f2fd),
+        
         body: ListView(
           children: <Widget>[
             SizedBox(
