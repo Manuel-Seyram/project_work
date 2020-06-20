@@ -70,8 +70,8 @@ flutter:
      - assets/icons/2.0x/ic_volume_up.png
      - assets/icons/3.0x/ic_volume_up.png
      - assets/images/alleviatelogo.jpg
-     - assets/images/Artboard.jpg
-     - assets/images/Artboardd.jpg
+     - assets/images/Artboard.png
+     - assets/images/Artboardd.png
      - assets/images/happyicon.png
      - assets/images/chaticon.png
      - assets/images/contacticon.png
