@@ -108,6 +108,9 @@ class _MyAppState extends State <MyApp> {
 
          body:
 
+         Column(
+           children: [
+
          _pageChoser(_selectedItemPosition),
 
          
@@ -266,6 +269,8 @@ class _MyAppState extends State <MyApp> {
              ],
            ),
            
+         ),
+           ],
          ),
 
          
