@@ -6,7 +6,7 @@ class CheckBoxInListview extends StatefulWidget {
 }
 
 class _CheckBoxInListviewState extends State<CheckBoxInListview> {
-  bool _isChecked = true;
+  bool _isChecked = false;
 
   List<String> _texts = [
     "Movies",
@@ -23,12 +23,24 @@ class _CheckBoxInListviewState extends State<CheckBoxInListview> {
       appBar: AppBar(
       
         title: Text("Choose Likes", textAlign: TextAlign.center,),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue[100],
       ),
       
-      body: ListView(
+      body:
+      
+      new Stack(
+
+        children:<Widget>[
+      
+      Center(
+      
+     child: Container(
+
+       decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboardd.png"), fit:BoxFit.cover,),),
+    
+    child: ListView(
         
-        
+      
         padding: EdgeInsets.all(8.0),
         children: _texts.map((text) => CheckboxListTile(
           title: Text(text),
@@ -46,21 +58,34 @@ class _CheckBoxInListviewState extends State<CheckBoxInListview> {
       ).toList(),
 
 
+
+       )
+       
+      
+      )
+
+    
+      )
+
+        ]
+      
     
       ),
+      
       
       floatingActionButton: RaisedButton(onPressed: (){},
        textColor: Colors.white, 
        color: Colors.blue,
-       child: new Text("Finish"),
+       child: new Text("    Finish    "),
        shape: RoundedRectangleBorder(
        borderRadius: new BorderRadius.circular(18.0),
        side: BorderSide(color: Colors.blue),
          ),
        ),
+        
+      
 
-    backgroundColor: Colors.blue[100],
-
+  
     );
 
 
