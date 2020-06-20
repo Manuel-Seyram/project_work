@@ -18,6 +18,31 @@ class _SignUpState extends State <SignUp> {
    @override
   Widget build(BuildContext context) {
 
+    final firstnameField = TextField(
+      obscureText: false,
+      style: style,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Firstname",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        icon: Icon(Icons.contacts)
+      ),
+    );
+
+
+    final lasttnameField = TextField(
+      obscureText: false,
+      style: style,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Lastname",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        icon: Icon(Icons.contacts)
+      ),
+    );
+
 
     final emailField = TextField(
       obscureText: false,
@@ -26,7 +51,8 @@ class _SignUpState extends State <SignUp> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Email",
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        icon: Icon(Icons.mail)
       ),
     );
 
@@ -38,7 +64,8 @@ class _SignUpState extends State <SignUp> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Password",
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+         icon: Icon(Icons.vpn_key)
       ),
     );
 
@@ -80,7 +107,7 @@ class _SignUpState extends State <SignUp> {
             
             child: Container(
               //color: Colors.blue[200],
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboardd.jpg"), fit:BoxFit.cover,),),
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/Artboardd.png"), fit:BoxFit.cover,),),
               child: Padding(padding: const EdgeInsets.all(36.0),  
               child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
                children: <Widget>[
@@ -89,6 +116,14 @@ class _SignUpState extends State <SignUp> {
                 
                 SizedBox( height: 45.0),
 
+                firstnameField,
+
+                SizedBox(height: 25.0),
+
+                lasttnameField,
+
+                SizedBox(height: 25.0),
+
                 emailField,
 
                 SizedBox( height: 25.0),
@@ -96,6 +131,7 @@ class _SignUpState extends State <SignUp> {
                 passwordField,
 
                 SizedBox( height: 25.0),
+
                 registerButton,
                 SizedBox( height: 15.0),
 
