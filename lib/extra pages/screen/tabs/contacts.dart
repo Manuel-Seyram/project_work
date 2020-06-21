@@ -1,4 +1,3 @@
-import 'package:project_work/extra pages/widget/appBar.dart';
 import 'package:flutter/material.dart';
 
 class Contacts extends StatefulWidget {
@@ -10,9 +9,62 @@ class _ContactsState extends State<Contacts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBar("Contact"),
-        backgroundColor: Color(0xffe3f2fd),
-        
+        appBar: AppBar(
+      
+        title: Text("Contacts", textAlign: TextAlign.center,),
+        backgroundColor: Colors.white,
+      ),
+      
+
+      drawer: new Drawer (
+
+              child: ListView(
+              
+                children : <Widget>[
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.arrow_back),
+                    title: Text("Back"),
+  
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.settings),
+                    title: Text("Settings"),
+                  ),
+
+
+                   ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.mood_bad),
+                    title: Text("Logout"),
+                  ),
+
+
+
+
+                ]
+              ),               
+
+         ),
+
+
+
+
+
+
         body: ListView(
           children: <Widget>[
             SizedBox(
@@ -90,3 +142,69 @@ Widget items(BuildContext context, String text, String image) {
     ),
   );
 }
+
+class Mydrawer extends StatefulWidget {
+  @override
+  _MydrawerState createState() => _MydrawerState ();
+}
+
+
+class _MydrawerState extends State <Mydrawer> {
+
+@override
+
+Widget build(BuildContext context) {
+
+    return Scaffold(
+      
+
+      drawer: new Drawer (
+
+              child:
+
+                ListView(
+                
+                  children : <Widget>[
+
+                    ListTile(
+
+                      onTap: (){},
+                      leading: Icon(Icons.arrow_back),
+                      title: Text("Back"),
+  
+                    ),
+
+                    ListTile(
+
+                      onTap: (){},
+                      leading: Icon(Icons.home),
+                      title: Text("Home"),
+                    ),
+
+                    ListTile(
+
+                      onTap: (){},
+                      leading: Icon(Icons.settings),
+                      title: Text("Settings"),
+                    ),
+
+
+                     ListTile(
+
+                      onTap: (){},
+                      leading: Icon(Icons.mood_bad),
+                      title: Text("Logout"),
+                    ),
+            ]
+          ),
+                       
+
+      ),
+
+     
+    );
+  }
+
+
+}
+
