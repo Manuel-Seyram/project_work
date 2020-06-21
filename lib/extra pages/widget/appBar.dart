@@ -26,13 +26,13 @@ AppBar appBar(String name) {
  );
 }
 
-class Drawer extends StatefulWidget {
+class Mydrawer extends StatefulWidget {
   @override
-  _DrawerState createState() => _DrawerState ();
+  _MydrawerState createState() => _MydrawerState ();
 }
 
 
-class _DrawerState extends State <Drawer> {
+class _MydrawerState extends State <Mydrawer> {
 
 @override
 
@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
 
       drawer: new Drawer (
 
-              child: <Widget>[
+              child:
 
                 ListView(
                 
@@ -80,7 +80,7 @@ Widget build(BuildContext context) {
                     ),
             ]
           ),
-        ],               
+                       
 
       ),
 
