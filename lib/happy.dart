@@ -4,9 +4,6 @@ import 'package:project_work/movies/movies.dart';
 import 'music/music.dart';
 import 'movies/movies.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'extra pages/screen/tabs/diary.dart';
-import 'extra pages/screen/tabs/contacts.dart';
-import 'extra pages/screen/tabs/chats.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 
 
@@ -17,32 +14,7 @@ class MyApp extends StatefulWidget {
 
 
 class _MyAppState extends State <MyApp> {
-  int _selectedItemPosition = 0;
-  Widget _pageChoser(int page) {
-
-    switch (page) {
-      case 0:
-        return Chat();
-        break;
-      case 1:
-        return MyApp();
-        break;
-      case 2:
-        return Diary();
-
-        break;
-      case 3:
-        return Contacts();
-        break;
-      default:
-        return Container(
-            child: Center(
-          child: Text("No page found"),
-        ));
-        
-    }
-  }
-
+  
 
   @override 
   
@@ -52,7 +24,7 @@ class _MyAppState extends State <MyApp> {
 
          appBar: new AppBar(
            title: Text("Happy"),
-           backgroundColor: Colors.blue,
+           backgroundColor: Colors.blue[100],
          ),
 
   
@@ -108,12 +80,6 @@ class _MyAppState extends State <MyApp> {
 
          body:
 
-         Column(
-           children: [
-
-         _pageChoser(_selectedItemPosition),
-
-         
          Container(
            
            padding: EdgeInsets.all(20.0),
@@ -269,66 +235,10 @@ class _MyAppState extends State <MyApp> {
              ],
            ),
            
-         ),
-           ],
-         ),
-
-         
-         
-
-      bottomNavigationBar: SnakeNavigationBar(
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        style: SnakeBarStyle.pinned,
-        backgroundColor: Colors.blue,
-        selectionColor: Color(0xffe3f2fd),
-        selectedIconColor: Colors.blue,
-        snakeShape: SnakeShape.circle,
-
-        //  backgroundColor:  Color.fromRGBO(244, 128, 71, 1),
-        currentIndex: _selectedItemPosition,
-        onTap: (index) => setState(() => _selectedItemPosition = index),
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.list,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Chat',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              )),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.live_tv, color: Colors.white),
-              title: Text(
-                'Happy',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              )),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.receipt, color: Colors.white),
-              title: Text(
-                'Diary',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              )),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.white),
-              title: Text(
-                'Contacts',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              )),
-        ],
-      ),
+         ),    
          
     );
-    
+  
   }
   
 }
