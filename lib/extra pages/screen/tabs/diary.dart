@@ -1,4 +1,3 @@
-import 'package:project_work/extra pages/widget/appBar.dart';
 import 'package:flutter/material.dart';
 
 class Diary extends StatefulWidget {
@@ -10,7 +9,64 @@ class _DiaryState extends State<Diary> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Diary"),
+      
+      appBar: AppBar(
+      
+        title: Text("Diary", textAlign: TextAlign.center,),
+        backgroundColor: Color(0xffe3f2fd),
+      ),
+      
+
+      drawer: new Drawer (
+
+              child: ListView(
+              
+                children : <Widget>[
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.arrow_back),
+                    title: Text("Back"),
+  
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                  ),
+
+                  ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.settings),
+                    title: Text("Settings"),
+                  ),
+
+
+                   ListTile(
+
+                    onTap: (){},
+                    leading: Icon(Icons.mood_bad),
+                    title: Text("Logout"),
+                  ),
+
+
+
+
+                ]
+              ),               
+
+         ),
+
+
+
+
+
+
+
       backgroundColor: Color(0xffe3f2fd),
       body: Column(
         children: <Widget>[
