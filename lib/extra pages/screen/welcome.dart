@@ -25,19 +25,17 @@ class Welcome extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(left: 130.0),
-              child: Text("WELCOME!!!",
+              child: Text("   WELCOME",
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 25.0)),
+                  style: TextStyle(color: Colors.white, fontSize: 27.0)),
             ),
             // SizedBox(width: 12),
             Padding(
-              padding: const EdgeInsets.only(left: 8.0),
+              padding: const EdgeInsets.only(left: 60.0),
               child: IconButton(
                   icon: Icon(Icons.notification_important),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Diary()));
-                  }),
+                  onPressed: () {}
+                  ),
             )
           ],
         ),
@@ -49,14 +47,9 @@ class Welcome extends StatelessWidget {
           },
           child: CircleAvatar(
             radius: 60,
+            backgroundImage: AssetImage('assets/images/homeicon.png'),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(
-                  Icons.hourglass_full,
-                  size: 50,
-                )
-              ],
             ),
           ),
         ),
