@@ -20,7 +20,8 @@ class _LogInState extends State <LogIn> {
   Widget build(BuildContext context) {
 
 
-    final emailField = TextField(
+
+    final emailField = TextFormField(
       obscureText: false,
       style: style,
       keyboardType: TextInputType.emailAddress,
@@ -33,7 +34,7 @@ class _LogInState extends State <LogIn> {
     );
 
 
-     final passwordField = TextField(
+     final passwordField = TextFormField(
       obscureText: true,
       style: style,
       keyboardType: TextInputType.text,
