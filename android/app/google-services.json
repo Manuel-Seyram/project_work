@@ -1,34 +1,57 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "891897352807",
     "firebase_url": "https://project-work-819f4.firebaseio.com",
     "project_id": "project-work-819f4",
     "storage_bucket": "project-work-819f4.appspot.com"
+=======
+    "project_number": "452679152454",
+    "firebase_url": "https://alleviate-42d79.firebaseio.com",
+    "project_id": "alleviate-42d79",
+    "storage_bucket": "alleviate-42d79.appspot.com"
+>>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:891897352807:android:9c1ddf3371f1ec633afac2",
+=======
+        "mobilesdk_app_id": "1:452679152454:android:9aa3a0faf3afa3ec4deb47",
+>>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
         "android_client_info": {
           "package_name": "com.example.project_work"
         }
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
           "client_id": "891897352807-b6ff8bh559gjrksd3s1125b63ha5svo9.apps.googleusercontent.com",
+=======
+          "client_id": "452679152454-cgkal41a5gjk6u3mmidm1p0ql49rtth5.apps.googleusercontent.com",
+>>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyDfNbkMIlSCSsvEWVJEb0pb1HM5RLP0dfU"
+=======
+          "current_key": "AIzaSyAsUTSxO7j2u5k5CGzMLDlY7XUToqE5FUc"
+>>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< HEAD
               "client_id": "891897352807-b6ff8bh559gjrksd3s1125b63ha5svo9.apps.googleusercontent.com",
+=======
+              "client_id": "452679152454-cgkal41a5gjk6u3mmidm1p0ql49rtth5.apps.googleusercontent.com",
+>>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
               "client_type": 3
             }
           ]
