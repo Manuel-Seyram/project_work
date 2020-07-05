@@ -12,14 +12,10 @@ class _LogInState extends State<LogIn> {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
 
 
 
     final emailField = TextFormField(
-=======
-    final emailField = TextField(
->>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -28,12 +24,8 @@ class _LogInState extends State<LogIn> {
           icon: Icon(Icons.mail)),
     );
 
-<<<<<<< HEAD
 
      final passwordField = TextFormField(
-=======
-    final passwordField = TextField(
->>>>>>> 9e89eedffd4a3015f628674216256a856dbb7d4c
       obscureText: true,
       style: style,
       keyboardType: TextInputType.text,
