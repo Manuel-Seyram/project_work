@@ -11,6 +11,8 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State <SignUp> {
 
 
+
+
  TextStyle style = TextStyle (fontFamily: '', fontSize: 20.0, color: Colors.black);
 
 
@@ -18,7 +20,8 @@ class _SignUpState extends State <SignUp> {
    @override
   Widget build(BuildContext context) {
 
-    final firstnameField = TextField(
+
+    final firstnameField = TextFormField(
       obscureText: false,
       style: style,
       keyboardType: TextInputType.text,
@@ -31,7 +34,7 @@ class _SignUpState extends State <SignUp> {
     );
 
 
-    final lasttnameField = TextField(
+    final lasttnameField = TextFormField(
       obscureText: false,
       style: style,
       keyboardType: TextInputType.text,
@@ -44,7 +47,7 @@ class _SignUpState extends State <SignUp> {
     );
 
 
-    final emailField = TextField(
+    final emailField = TextFormField(
       obscureText: false,
       style: style,
       keyboardType: TextInputType.emailAddress,
@@ -54,10 +57,11 @@ class _SignUpState extends State <SignUp> {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
         icon: Icon(Icons.mail)
       ),
+    
     );
 
 
-     final passwordField = TextField(
+     final passwordField = TextFormField(
       obscureText: true,
       style: style,
       keyboardType: TextInputType.text,
@@ -67,6 +71,7 @@ class _SignUpState extends State <SignUp> {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
          icon: Icon(Icons.vpn_key)
       ),
+    
     );
 
 
