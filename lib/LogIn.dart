@@ -26,13 +26,6 @@ class _SignUpState extends State<SignUp> {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(left: 130.0),
-              child: Text("Login",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Pacifico',
-                      fontSize: 50.0),
-                  textAlign: TextAlign.center),
             )
           ],
         ),
@@ -44,14 +37,25 @@ class _SignUpState extends State<SignUp> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                padding: const EdgeInsets.symmetric(
-                    vertical: 17.0, horizontal: 16.0),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(36.0),
                 child: Builder(
                     builder: (context) => Form(
                         key: _formKey,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(height: 15.0),
+                              Text(
+                                "Login",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontFamily: 'Pacifico',
+                                    fontSize: 50.0),
+                                textAlign: TextAlign.center,
+                              ),
                               TextFormField(
                                 obscureText: false,
                                 style: style,
@@ -73,6 +77,7 @@ class _SignUpState extends State<SignUp> {
                                 onSaved: (val) =>
                                     setState(() => _user.email = val),
                               ),
+                              SizedBox(height: 15.0),
                               TextFormField(
                                   obscureText: true,
                                   style: style,
@@ -103,8 +108,8 @@ class _SignUpState extends State<SignUp> {
                                         side: BorderSide(color: Colors.blue),
                                       ),
                                       color: Colors.blue,
-                                      onPressed: signup,
-                                      child: Text('Sign Up'))),
+                                      onPressed: signin,
+                                      child: Text('LogIn'))),
                             ])))))
       ],
     ));
@@ -115,7 +120,7 @@ class _SignUpState extends State<SignUp> {
         .showSnackBar(SnackBar(content: Text('Logging you in')));
   }
 
-  Future<void> signup() async {
+  Future<void> signin() async {
     final formState = _formKey.currentState;
     if (formState.validate()) {
       formState.save();
