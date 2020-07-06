@@ -103,7 +103,7 @@ class _LogInState extends State<LogIn> {
                                         side: BorderSide(color: Colors.blue),
                                       ),
                                       color: Colors.blue,
-                                      onPressed: () => signin, 
+                                      onPressed: signin, 
                                       child: Text('Register'))),
                             ])))))
       ],
@@ -115,7 +115,7 @@ class _LogInState extends State<LogIn> {
         .showSnackBar(SnackBar(content: Text('Registered Succesfully')));
   }
 
-  Future<void> signin() async {
+       void signin() async {
     if (_formKey.currentState.validate()) {
        _formKey.currentState.save();
 
@@ -124,8 +124,8 @@ class _LogInState extends State<LogIn> {
             .createUserWithEmailAndPassword(
                 email: _user.email, password: _user.password)) as FirebaseUser;
         user.sendEmailVerification();
-        
-        Navigator.pushReplacement(
+        _showDialog(context);
+         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SignUp()));
       } catch (e) {
         print(e.messgae);
