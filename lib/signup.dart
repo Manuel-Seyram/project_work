@@ -3,7 +3,6 @@ import 'LogIn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'models.dart';
 
-
 // had to switch the login part for sign up. So this page is Sign up.
 class LogIn extends StatefulWidget {
   @override
@@ -103,7 +102,7 @@ class _LogInState extends State<LogIn> {
                                         side: BorderSide(color: Colors.blue),
                                       ),
                                       color: Colors.blue,
-                                      onPressed: signin, 
+                                      onPressed: signin,
                                       child: Text('Register'))),
                             ])))))
       ],
@@ -115,9 +114,9 @@ class _LogInState extends State<LogIn> {
         .showSnackBar(SnackBar(content: Text('Registered Succesfully')));
   }
 
-       void signin() async {
+  void signin() async {
     if (_formKey.currentState.validate()) {
-       _formKey.currentState.save();
+      _formKey.currentState.save();
 
       try {
         FirebaseUser user = (await FirebaseAuth.instance
@@ -125,7 +124,7 @@ class _LogInState extends State<LogIn> {
                 email: _user.email, password: _user.password)) as FirebaseUser;
         user.sendEmailVerification();
         _showDialog(context);
-         Navigator.pushReplacement(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SignUp()));
       } catch (e) {
         print(e.messgae);
