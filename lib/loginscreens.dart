@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
-import 'Login.dart';
+import 'LogIn.dart';
+import 'SignUp.dart';
 
 class Loginscreens extends StatefulWidget {
   @override
@@ -48,7 +48,7 @@ class _LoginscreensState extends State<Loginscreens> {
                         child: Text("                       Login                            "),
                         onPressed: (){
                            Navigator.push(
-                          context, MaterialPageRoute(builder: (context)=> LogIn())
+                          context, MaterialPageRoute(builder: (context)=> SignUp())
                           );
                         },
                         color: Colors.blue,
@@ -64,7 +64,7 @@ class _LoginscreensState extends State<Loginscreens> {
                         child: Text("      No Account? Sign Up       "),
                         onPressed: (){
                            Navigator.push(
-                           context, MaterialPageRoute(builder: (context)=> SignUp())
+                           context, MaterialPageRoute(builder: (context)=> LogIn())
                           );
                         },
                         color: Colors.white,
