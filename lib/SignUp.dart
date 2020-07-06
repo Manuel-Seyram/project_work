@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_work/extra%20pages/screen/welcome.dart';
 import 'LogIn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'models.dart';
@@ -21,17 +22,10 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
         body: new Stack(
       children: <Widget>[
-        Row(
+        Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(left: 130.0),
-              child: Text("Register",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Pacifico',
-                      fontSize: 50.0),
-                  textAlign: TextAlign.center),
+              padding: EdgeInsets.only(left: 10.0),
             )
           ],
         ),
@@ -43,14 +37,29 @@ class _LogInState extends State<LogIn> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                padding: const EdgeInsets.symmetric(
-                    vertical: 17.0, horizontal: 16.0),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(36.0),
                 child: Builder(
                     builder: (context) => Form(
                         key: _formKey,
                         child: Column(
+
                             crossAxisAlignment: CrossAxisAlignment.stretch,
+                            mainAxisAlignment: MainAxisAlignment.center,
+
                             children: [
+                              SizedBox(height: 15.0),
+
+                              Text(
+                        "Register",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontStyle: FontStyle.italic,
+                            fontFamily: 'Pacifico',
+                            fontSize: 50.0),
+                            textAlign: TextAlign.center,
+                              ),
+
                               TextFormField(
                                 obscureText: false,
                                 style: style,
@@ -72,6 +81,9 @@ class _LogInState extends State<LogIn> {
                                 onSaved: (val) =>
                                     setState(() => _user.email = val),
                               ),
+
+                              SizedBox(height: 15.0),
+
                               TextFormField(
                                   obscureText: true,
                                   style: style,
@@ -96,25 +108,26 @@ class _LogInState extends State<LogIn> {
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 16.0, horizontal: 16.0),
                                   child: RaisedButton(
+                                 padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             new BorderRadius.circular(18.0),
                                         side: BorderSide(color: Colors.blue),
                                       ),
                                       color: Colors.blue,
-                                      onPressed: signin,
+                                      onPressed: signup,
                                       child: Text('Register'))),
                             ])))))
       ],
     ));
-  }
+  } 
 
   _showDialog(BuildContext context) {
     Scaffold.of(context)
         .showSnackBar(SnackBar(content: Text('Registered Succesfully')));
   }
 
-  void signin() async {
+       void signup()async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
 
@@ -123,9 +136,8 @@ class _LogInState extends State<LogIn> {
             .createUserWithEmailAndPassword(
                 email: _user.email, password: _user.password)) as FirebaseUser;
         user.sendEmailVerification();
-        _showDialog(context);
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SignUp()));
+            context, MaterialPageRoute(builder: (context)=> SignUp()));
       } catch (e) {
         print(e.messgae);
       }
