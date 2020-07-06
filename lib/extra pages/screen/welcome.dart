@@ -1,5 +1,5 @@
 import 'package:project_work/extra pages/screen/navigationbar.dart';
-import 'package:project_work/Login.dart';
+import 'package:project_work/SignUp.dart';
 import 'package:project_work/extra pages/screen/tabs/contacts.dart';
 import 'package:project_work/extra pages/screen/tabs/diary.dart';
 import 'package:project_work/extra pages/screen/tabs/chats.dart';
@@ -106,7 +106,7 @@ class Welcome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             CircleAvatar(
-              radius: 65,
+              radius: 60,
               backgroundImage: AssetImage('assets/images/homeicon.png'),
               child: new GestureDetector(
                 onTap: () {
@@ -117,7 +117,7 @@ class Welcome extends StatelessWidget {
             ),
             //Text("Diary", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
-              radius: 65,
+              radius: 60,
               backgroundImage: AssetImage('assets/images/diaryicon.png'),
               child: new GestureDetector(
                 onTap: () {
