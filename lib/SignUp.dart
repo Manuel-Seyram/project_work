@@ -3,6 +3,7 @@ import 'package:project_work/extra%20pages/screen/welcome.dart';
 import 'LogIn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'models.dart';
+import 'Dialogbox.dart';
 
 // had to switch the login part for sign up. So this page is Sign up.
 class LogIn extends StatefulWidget {
@@ -11,6 +12,9 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+
+    DialogBox dialogBox = new DialogBox();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _user = User();
 
@@ -132,13 +136,15 @@ class _LogInState extends State<LogIn> {
       _formKey.currentState.save();
 
       try {
-        FirebaseUser user = (await FirebaseAuth.instance
+        AuthResult user = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(
-                email: _user.email, password: _user.password)) as FirebaseUser;
-        user.sendEmailVerification();
+                email: _user.email, password: _user.password);
+        //user.sendEmailVerification();
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context)=> SignUp()));
+            dialogBox.information(context, "Congratulations", "Your account has been created successfully." ); 
       } catch (e) {
+        dialogBox.information(context, "Error = ", e.toString());
         print(e.messgae);
       }
     }
