@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'models.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_work/extra pages/screen/welcome.dart';
+import 'Dialogbox.dart';
 
 // And this page is rather the log in
 
@@ -11,6 +12,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  DialogBox dialogBox = new DialogBox();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _user = User();
 
@@ -128,10 +131,14 @@ class _SignUpState extends State<SignUp> {
       try {
         AuthResult user = await FirebaseAuth.instance
             .signInWithEmailAndPassword(
-                email: _user.email, password: _user.password);
+                email: _user.email, password: _user.password);    
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Welcome()));
+
+            dialogBox.information(context, "", "You are logged in successfully." );
+            
       } catch (e) {
+        dialogBox.information(context, "Error = ", e.toString());
         print(e.messgae);
       }
     }
