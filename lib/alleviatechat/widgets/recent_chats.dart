@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/models/message_model.dart';
-import 'package:flutter_chat_ui/screens/chat_screen.dart';
+import 'package:project_work/alleviatechat/models/message_model.dart';
+import 'package:project_work/alleviatechat/screens/chat_screen.dart';
 
 class RecentChats extends StatelessWidget {
   @override
@@ -37,7 +37,7 @@ class RecentChats extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   decoration: BoxDecoration(
-                    color: chat.unread ? Color(0xFFFFEFEE) : Colors.white,
+                    color: chat.unread ? Colors.blue[200] : Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20.0),
                       bottomRight: Radius.circular(20.0),
