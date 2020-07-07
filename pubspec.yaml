@@ -87,6 +87,10 @@ flutter:
      - assets/images/contacticon.png
      - assets/images/homeicon.png
      - assets/images/diaryicon.png
+     - assets/images/greg.jpg
+     - assets/images/james.jpg
+     - assets/images/john.jpg
+     - assets/images/olivia.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
