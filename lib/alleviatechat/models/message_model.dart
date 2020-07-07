@@ -1,4 +1,4 @@
-import 'package:flutter_chat_ui/models/user_model.dart';
+import 'package:project_work/alleviatechat/models/user_model.dart';
 
 class Message {
   final User sender;
@@ -25,93 +25,58 @@ final User currentUser = User(
 );
 
 // USERS
-final User greg = User(
+final User ug = User(
   id: 1,
-  name: 'Greg',
+  name: 'UG career and counselling',
   imageUrl: 'assets/images/greg.jpg',
 );
-final User james = User(
+final User drjames = User(
   id: 2,
-  name: 'James',
+  name: 'Dr. James',
   imageUrl: 'assets/images/james.jpg',
 );
-final User john = User(
+final User drjohn = User(
   id: 3,
-  name: 'John',
+  name: 'Dr. John',
   imageUrl: 'assets/images/john.jpg',
 );
-final User olivia = User(
+final User drolivia = User(
   id: 4,
-  name: 'Olivia',
+  name: 'Dr. Olivia',
   imageUrl: 'assets/images/olivia.jpg',
 );
-final User sam = User(
-  id: 5,
-  name: 'Sam',
-  imageUrl: 'assets/images/sam.jpg',
-);
-final User sophia = User(
-  id: 6,
-  name: 'Sophia',
-  imageUrl: 'assets/images/sophia.jpg',
-);
-final User steven = User(
-  id: 7,
-  name: 'Steven',
-  imageUrl: 'assets/images/steven.jpg',
-);
+
 
 // FAVORITE CONTACTS
-List<User> favorites = [sam, steven, olivia, john, greg];
+List<User> favorites = [drolivia, drjohn, ug];
 
 // EXAMPLE CHATS ON HOME SCREEN
 List<Message> chats = [
   Message(
-    sender: james,
+    sender: drjames,
     time: '5:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
+    text: 'Hey, how\'s it going? What did you want to talk about?',
     isLiked: false,
     unread: true,
   ),
   Message(
-    sender: olivia,
+    sender: drolivia,
     time: '4:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
+    text: 'Okay',
     isLiked: false,
     unread: true,
   ),
   Message(
-    sender: john,
+    sender: drjohn,
     time: '3:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
+    text: 'Today',
     isLiked: false,
     unread: false,
   ),
   Message(
-    sender: sophia,
-    time: '2:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
-    isLiked: false,
-    unread: true,
-  ),
-  Message(
-    sender: steven,
-    time: '1:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
-    isLiked: false,
-    unread: false,
-  ),
-  Message(
-    sender: sam,
-    time: '12:30 PM',
-    text: 'Hey, how\'s it going? What did you do today?',
-    isLiked: false,
-    unread: false,
-  ),
-  Message(
-    sender: greg,
+    sender: ug,
     time: '11:30 AM',
-    text: 'Hey, how\'s it going? What did you do today?',
+    text: 'Hey, how\'s it going? What did you want to talk about?',
     isLiked: false,
     unread: false,
   ),
@@ -120,7 +85,7 @@ List<Message> chats = [
 // EXAMPLE MESSAGES IN CHAT SCREEN
 List<Message> messages = [
   Message(
-    sender: james,
+    sender: drjames,
     time: '5:30 PM',
     text: 'Hey, how\'s it going? What did you do today?',
     isLiked: true,
@@ -134,30 +99,30 @@ List<Message> messages = [
     unread: true,
   ),
   Message(
-    sender: james,
+    sender: drjames,
     time: '3:45 PM',
-    text: 'How\'s the doggo?',
+    text: 'Wow that is good progress.',
     isLiked: false,
     unread: true,
   ),
   Message(
-    sender: james,
+    sender: drjames,
     time: '3:15 PM',
-    text: 'All the food',
+    text: 'You should come to my office for an appointment again.',
     isLiked: true,
     unread: true,
   ),
   Message(
     sender: currentUser,
     time: '2:30 PM',
-    text: 'Nice! What kind of food did you eat?',
+    text: 'I will try to be there doctor. what day?',
     isLiked: false,
     unread: true,
   ),
   Message(
-    sender: james,
+    sender: drjames,
     time: '2:00 PM',
-    text: 'I ate so much food today.',
+    text: 'Is Friday okay?',
     isLiked: false,
     unread: true,
   ),
