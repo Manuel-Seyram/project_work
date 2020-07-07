@@ -8,6 +8,7 @@ import 'package:project_work/happy.dart';
 import 'package:flutter/material.dart';
 import 'package:project_work/alleviateblog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:project_work/alleviatechat/screens/home_screen.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -85,7 +86,7 @@ class _WelcomeState extends State<Welcome>{
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Chat()));
+                      context, MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
               ),
             ),
