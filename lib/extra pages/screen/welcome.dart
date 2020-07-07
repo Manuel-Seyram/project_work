@@ -1,3 +1,4 @@
+import 'package:project_work/LogIn.dart';
 import 'package:project_work/extra pages/screen/navigationbar.dart';
 import 'package:project_work/SignUp.dart';
 import 'package:project_work/extra pages/screen/tabs/contacts.dart';
@@ -5,12 +6,23 @@ import 'package:project_work/extra pages/screen/tabs/diary.dart';
 import 'package:project_work/extra pages/screen/tabs/chats.dart';
 import 'package:project_work/happy.dart';
 import 'package:flutter/material.dart';
+import 'package:project_work/alleviateblog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class Welcome extends StatelessWidget {
+class Welcome extends StatefulWidget {
+  @override
+  _WelcomeState createState() => _WelcomeState();
+}
+
+class _WelcomeState extends State<Welcome>{
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff2979FF),
+
+      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomPadding: true,
 
       // appBar: AppBar(
       //   title: Text("I;m a title"),
@@ -33,9 +45,7 @@ class Welcome extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 60.0),
               child: IconButton(
-                  icon: Icon(Icons.notification_important),
-                  onPressed: () {}
-                  ),
+                  icon: Icon(Icons.notification_important), onPressed: () {}),
             )
           ],
         ),
@@ -43,7 +53,7 @@ class Welcome extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Navigation()));
+                context, MaterialPageRoute(builder: (context) => Blog()));
           },
           child: CircleAvatar(
             radius: 60,
@@ -60,25 +70,22 @@ class Welcome extends StatelessWidget {
             CircleAvatar(
               radius: 65,
               backgroundImage: AssetImage('assets/images/happyicon.png'),
-          
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyApp()));
                 },
-              
               ),
-      
             ),
-        
+
             //Text("Home", style: TextStyle(color: Colors.white, fontSize: 12.0)),
             CircleAvatar(
               radius: 65,
               backgroundImage: AssetImage('assets/images/chaticon.png'),
               child: new GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Chat()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Chat()));
                 },
               ),
             ),
@@ -91,7 +98,9 @@ class Welcome extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 60,
-                backgroundImage: AssetImage('assets/images/contacticon.png',),
+                backgroundImage: AssetImage(
+                  'assets/images/contacticon.png',
+                ),
                 child: new GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -132,14 +141,21 @@ class Welcome extends StatelessWidget {
         Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           new GestureDetector(
             child: new Icon(Icons.keyboard_return, size: 50.0),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LogIn()));
-            },
+            onTap: signout,
           ),
           Text("Logout", style: TextStyle(color: Colors.white, fontSize: 12.0)),
         ])
       ]),
     );
+  }
+  void signout() async {
+    try {
+
+      await FirebaseAuth.instance.signOut();
+      Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SignUp()));
+    } catch (e) {
+      print(e.messgae);
+    }
   }
 }
