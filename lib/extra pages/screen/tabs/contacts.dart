@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_work/alleviatechat/screens/home_screen.dart';
 
 class Contacts extends StatefulWidget {
   @override
@@ -98,7 +99,9 @@ class _ContactsState extends State<Contacts> {
                       "GET HELP NOW",
                       style: TextStyle(color: Colors.white),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()) );
+                    },
                   )),
             ),
             Text(
