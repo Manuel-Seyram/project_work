@@ -1,14 +1,13 @@
 import 'package:project_work/LogIn.dart';
-import 'package:project_work/extra pages/screen/navigationbar.dart';
-import 'package:project_work/SignUp.dart';
 import 'package:project_work/extra pages/screen/tabs/contacts.dart';
-import 'package:project_work/extra pages/screen/tabs/diary.dart';
-import 'package:project_work/extra pages/screen/tabs/chats.dart';
+import 'package:project_work/diaryroute.dart';
 import 'package:project_work/happy.dart';
 import 'package:flutter/material.dart';
 import 'package:project_work/alleviateblog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_work/alleviatechat/screens/home_screen.dart';
+import 'package:project_work/settings.dart';
+import 'package:project_work/Diary/Views/home_view.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -22,8 +21,8 @@ class _WelcomeState extends State<Welcome>{
     return Scaffold(
       backgroundColor: Color(0xff2979FF),
 
-      resizeToAvoidBottomInset: true,
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomPadding: false,
 
       // appBar: AppBar(
       //   title: Text("I;m a title"),
@@ -40,7 +39,8 @@ class _WelcomeState extends State<Welcome>{
               padding: EdgeInsets.only(left: 130.0),
               child: Text("   WELCOME",
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 27.0)),
+                  style: TextStyle(color: Colors.white, fontSize: 27.0),
+                  ),
             ),
             // SizedBox(width: 12),
             Padding(
@@ -117,11 +117,11 @@ class _WelcomeState extends State<Welcome>{
           children: <Widget>[
             CircleAvatar(
               radius: 60,
-              backgroundImage: AssetImage('assets/images/homeicon.png'),
+              backgroundImage: AssetImage('assets/images/settings.png'),
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApp()));
+                      MaterialPageRoute(builder: (context) => SettingsScreen()));
                 },
               ),
             ),
@@ -132,7 +132,7 @@ class _WelcomeState extends State<Welcome>{
               child: new GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Diary()));
+                      MaterialPageRoute(builder: (context) => Diaryroute()));
                 },
               ),
             ),
