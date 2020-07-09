@@ -12,8 +12,7 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
-
-    DialogBox dialogBox = new DialogBox();
+  DialogBox dialogBox = new DialogBox();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _user = User();
@@ -46,28 +45,26 @@ class _LogInState extends State<LogIn> {
                 child: Builder(
                     builder: (context) => Form(
                         key: _formKey,
-                        child: Column(
-
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            mainAxisAlignment: MainAxisAlignment.center,
-
-                            children: [
+                        child: SingleChildScrollView(
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
                               SizedBox(height: 15.0),
-
                               Text(
-                        "Register",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontStyle: FontStyle.italic,
-                            fontFamily: 'Pacifico',
-                            fontSize: 50.0),
-                            textAlign: TextAlign.center,
+                                "Register",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontFamily: 'Pacifico',
+                                    fontSize: 50.0),
+                                textAlign: TextAlign.center,
                               ),
-
                               TextFormField(
                                 obscureText: false,
                                 style: style,
                                 keyboardType: TextInputType.emailAddress,
+                                autofocus: false,
                                 decoration: InputDecoration(
                                     labelText: 'Email',
                                     contentPadding: EdgeInsets.fromLTRB(
@@ -85,13 +82,12 @@ class _LogInState extends State<LogIn> {
                                 onSaved: (val) =>
                                     setState(() => _user.email = val),
                               ),
-
                               SizedBox(height: 15.0),
-
                               TextFormField(
                                   obscureText: true,
                                   style: style,
                                   keyboardType: TextInputType.text,
+                                  autofocus: false,
                                   decoration: InputDecoration(
                                       labelText: 'Password',
                                       contentPadding: EdgeInsets.fromLTRB(
@@ -112,7 +108,8 @@ class _LogInState extends State<LogIn> {
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 16.0, horizontal: 16.0),
                                   child: RaisedButton(
-                                 padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                                      padding: EdgeInsets.fromLTRB(
+                                          20.0, 15.0, 20.0, 15.0),
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             new BorderRadius.circular(18.0),
@@ -121,17 +118,17 @@ class _LogInState extends State<LogIn> {
                                       color: Colors.blue,
                                       onPressed: signup,
                                       child: Text('Register'))),
-                            ])))))
+                            ]))))))
       ],
     ));
-  } 
+  }
 
   _showDialog(BuildContext context) {
     Scaffold.of(context)
         .showSnackBar(SnackBar(content: Text('Registered Succesfully')));
   }
 
-       void signup()async {
+  void signup() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
 
@@ -141,8 +138,9 @@ class _LogInState extends State<LogIn> {
                 email: _user.email, password: _user.password);
         //user.sendEmailVerification();
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context)=> SignUp()));
-            dialogBox.information(context, "Congratulations", "Your account has been created successfully." ); 
+            context, MaterialPageRoute(builder: (context) => SignUp()));
+        dialogBox.information(context, "Congratulations",
+            "Your account has been created successfully.");
       } catch (e) {
         dialogBox.information(context, "Error = ", e.toString());
         print(e.messgae);
