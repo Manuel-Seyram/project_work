@@ -45,10 +45,11 @@ class _SignUpState extends State<SignUp> {
                 child: Builder(
                     builder: (context) => Form(
                         key: _formKey,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                        child: SingleChildScrollView(
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
                               SizedBox(height: 15.0),
                               Text(
                                 "Login",
@@ -63,6 +64,7 @@ class _SignUpState extends State<SignUp> {
                                 obscureText: false,
                                 style: style,
                                 keyboardType: TextInputType.emailAddress,
+                                autofocus: false,
                                 decoration: InputDecoration(
                                     labelText: 'Email',
                                     contentPadding: EdgeInsets.fromLTRB(
@@ -85,6 +87,7 @@ class _SignUpState extends State<SignUp> {
                                   obscureText: true,
                                   style: style,
                                   keyboardType: TextInputType.text,
+                                  autofocus: false,
                                   decoration: InputDecoration(
                                       labelText: 'Password',
                                       contentPadding: EdgeInsets.fromLTRB(
@@ -113,7 +116,7 @@ class _SignUpState extends State<SignUp> {
                                       color: Colors.blue,
                                       onPressed: signin,
                                       child: Text('LogIn'))),
-                            ])))))
+                            ]))))))
       ],
     ));
   }
@@ -131,12 +134,11 @@ class _SignUpState extends State<SignUp> {
       try {
         AuthResult user = await FirebaseAuth.instance
             .signInWithEmailAndPassword(
-                email: _user.email, password: _user.password);    
+                email: _user.email, password: _user.password);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Welcome()));
 
-            dialogBox.information(context, "", "You are logged in successfully." );
-            
+        dialogBox.information(context, "", "You are logged in successfully.");
       } catch (e) {
         dialogBox.information(context, "Error = ", e.toString());
         print(e.messgae);
