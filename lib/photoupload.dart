@@ -91,8 +91,6 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
 
     return new Scaffold(
 
-      resizeToAvoidBottomInset: true,
-      resizeToAvoidBottomPadding: true,
       appBar: new AppBar(
         title: new Text("Upload Image"),
         centerTitle: true,
@@ -110,8 +108,10 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
 
   Widget enableUpload() {
     return Container(
+      
       child: new Form(
         key: formKey,
+        child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Image.file(
@@ -124,6 +124,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
             ),
             TextFormField(
               decoration: InputDecoration(labelText: "Description"),
+              autofocus: false,
               validator: (value) {
                 return value.isEmpty ? 'Description is required' : null;
               },
@@ -142,6 +143,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
               onPressed: uploadStatusImage,
             )
           ],
+        ),
         ),
       ),
     );
