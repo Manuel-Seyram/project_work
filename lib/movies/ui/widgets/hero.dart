@@ -40,7 +40,7 @@ class MyHero extends StatelessWidget {
                     },
                   ),
                   Text(
-                    "Netflixy",
+                    "Alleviate Movie Base",
                     style: Theme.of(context)
                         .textTheme
                         .title
