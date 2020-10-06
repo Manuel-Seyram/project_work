@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           leading: IconButton(
               icon: Icon(Icons.menu, color: Colors.black), onPressed: () {}),
           title: Text(
-            "Movie Base",
+            "Alleviate Movie Base",
             style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
